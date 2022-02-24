@@ -1,19 +1,22 @@
 Vue.component('pokemon-card',{
     props: {
         name : {
-            type: String
+            type : String
         },
         color : {
-            type: String
+            type : String
         },
         image : {
-            type: String
+            type : String
         },
         stats : {
-            type: Array
+            type : Array
         },
         id: {
-            type:Number
+            type : Number
+        },
+        types : {
+            type : Array
         }
     },
     template : 
@@ -37,6 +40,8 @@ Vue.component('pokemon-card',{
             </div>
             <div class="modal-body">
                 <p v-for="stat in stats">{{stat.stat.name.toUpperCase()}} : {{stat.base_stat}}</p>
+                <span>TYPE : </span>
+                <span v-for="type in types">{{type.type.name}} </span>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Fermer</button>
