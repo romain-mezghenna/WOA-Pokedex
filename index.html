@@ -16,17 +16,22 @@
 </head>
 <body>
     <div id="app">
-        <div class="search-wrapper panel-heading col-sm-12">
-            <input type="text" v-model="search" placeholder="Search">
-        </div>
-        <pokemon-card v-for="pokemon in filteredProducts" :key="pokemon.id"
+        <header>
+            <img id="logoheader" src="assets/logo.svg" alt="logopokedex">
+            <div  id="searchBox" class="search-wrapper panel-heading">
+                <input type="text" v-model="search" placeholder=" Search">
+            </div>
+        </header>
+        <div id="pokemonscards">
+            <pokemon-card v-for="pokemon in filteredProducts" :key="pokemon.id"
             v-bind:name="pokemon.name"
             v-bind:stats="pokemon.stats"
             v-bind:image='pokemon.sprites.other["official-artwork"].front_default'
             v-bind:id="pokemon.id"
             v-bind:types="pokemon.types"
             v-bind:style="{ backgroundColor: pokemon.color}"></pokemon-card>
-        <button class="pokemon" onclick="getPokemons()">Get more pokemons</button>
+            <button class="pokemon" onclick="getPokemons()">Get more pokemons</button>
+        </div>
     </div>
 
     <!-- Import App -->

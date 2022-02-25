@@ -10,7 +10,7 @@
     border-radius: 5%;
 }
 
-#app {
+#pokemonscards {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -19,4 +19,23 @@
 
 .sprites {
     max-height: 150px;
+}
+
+header {
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+}
+
+#logoheader {
+    max-height: 150px;
+}
+
+header #searchBox {
+    display: flex;
+    flex-direction: column;
+}
+
+header #searchBox input{
+    border-radius: 50px;
 }
