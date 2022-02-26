@@ -20,8 +20,6 @@ async function getPokemons(n){
                 })
             })
             index++
-        } else {
-
         }
     }
     timer = true
