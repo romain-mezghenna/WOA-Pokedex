@@ -20,6 +20,8 @@ async function getPokemons(n){
                 })
             })
             index++
+        } else {
+
         }
     }
     timer = true
@@ -50,6 +52,7 @@ P.getPokemonsList().then(res => {
     getPokemons(30)
 })
 
+//Lazy loading while scrolling
 document.onscroll = function(){
     if(timer){
         var h = window.outerHeight
